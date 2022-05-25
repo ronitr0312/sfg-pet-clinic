@@ -42,15 +42,22 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
-					<goal>install</goal>
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven2</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</pluginRepository>
+	</pluginRepositories>
 		<scm>
 			<developerConnection>scm:git:https://github.com/ronitr0312/sfg-pet-clinic.git</developerConnection>
 		</scm>
